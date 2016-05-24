@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Post;
 use App\Http\Requests;
-
+use Session;
 class PostController extends Controller
 {
     /**
@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+         return view('posts.create');
     }
 
     /**
@@ -36,7 +36,22 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $this->validate($request,array(
+                  'title' =>'required|max:255',
+                  
+                  'description' =>'required'
+            ));
+
+
+        //store in db
+            $post =new Post;
+            $post->title =$request->title;     
+            $post->description =$request->description;
+
+
+            $post->save();
+
+            Session::flash('success','The Post Successfully saved!');
     }
 
     /**
