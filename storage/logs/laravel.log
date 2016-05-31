@@ -12633,3 +12633,6 @@ Stack trace:
 #92 C:\Users\j\Desktop\newsLankaPhp2-2\newsLankaPhp2-2\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #93 C:\Users\j\Desktop\newsLankaPhp2-2\newsLankaPhp2-2\server.php(21): require_once('C:\Users\j\Desk...')
 #94 {main}  
+[2016-05-31 10:59:04] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Post' not found' in C:\Users\lahir\Documents\GitHub\newsLankaPhp2-2\storage\framework\views\cae50b40eb0b4068028aa42518d06a40935cc840.php:4
+Stack trace:
+#0 {main}  
