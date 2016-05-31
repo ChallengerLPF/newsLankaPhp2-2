@@ -1,4 +1,6 @@
-<nav class="navbar navbar-inverse navbar-static-top">
+<div class="jumbotron navbar-wrapper ">
+    <div class="header-top">
+<nav class=" container navbar navbar-inverse ">
         <div class="container">
             <div class="navbar-header">
 
@@ -19,7 +21,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="<?php echo e(url('/home')); ?>">Home</a></li>
+                    <li><a href="<?php echo e(url('/welcome')); ?>">Home</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -41,5 +43,13 @@
                     <?php endif; ?>
                 </ul>
             </div>
+
         </div>
     </nav>
+    <ol class="breadcrumb container">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Library</a></li>
+          <li class="active">Data</li>
+        </ol>
+    </div>
+</div>

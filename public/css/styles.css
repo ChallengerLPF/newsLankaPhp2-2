@@ -1,3 +1,19 @@
+
+.navbar {
+    
+
+    margin-bottom:1px; /*add this*/
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image:url("/images/back.jpg");
+   /* background-position: 0% 25%;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: bottom;
+}
 #pri{
 
 	margin: 18px;
@@ -105,5 +121,105 @@ a.socialIcon:hover, .socialHoverClass {
   -o-transition: all 0.8s;
   -ms-transition: all 0.8s;
   transition: all 0.8s;
+}
+
+.playbtnsm{
+  left: 50%;
+    margin-left: -12.5px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+
+}
+
+
+
+#image1{
+  width:70px;
+  height:70px;
+}
+#rightbarImage{
+
+  width:90px;
+  height:70px;
+}
+
+.post_nav li {
+  border-bottom: 1px dashed #ddd;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+.post_nav figure {
+  position: relative;
+  float: left;
+  overflow: hidden;    
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.post_nav figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+figure.effect-lily img {
+  max-width: none;
+  width: -webkit-calc(100% + 50px);
+  width: calc(100% + 50px);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.35s,-webkit-transform 0.35s;
+  transition: opacity 0.35s,transform 0.35s;
+  -webkit-transform: translate3d(-40px,0, 0);
+  transform: translate3d(-40px,0,0);
+}
+figure.effect-lily a:hover img{
+  opacity: 1;
+}
+
+figure.effect-lily a:hover img{
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.post_nav figcaption a {
+  display: block;
+  padding: 15px 15px 10px;
+  font-size: 16px;
+}
+.ppost_nav li{
+  float: left;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.catg_title{
+  font-size: 15px;
+}
+.ppost_nav li .media-left {
+  border: 1px solid #ddd;
+  padding: 4px;
+  margin-right: 5px;
+  float: left;
+}
+
+.numberofviews2 {
+  color: #999999;
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  padding-left: 5px;
+  margin-top: 2px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #CCC;
+  letter-spacing: 0px;
 }
 

@@ -26,4 +26,4 @@
     </style>
     <?php echo e(Html::style('css/styles.css')); ?>
 
-</head>
+   
