@@ -14,14 +14,14 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                    Laravel
+                    newsLanka
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="<?php echo e(url('/welcome')); ?>">Home</a></li>
+                    <li><a href="<?php echo e(url('/')); ?>">Home</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

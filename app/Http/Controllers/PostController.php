@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Http\Requests;
 use Session;
+
 class PostController extends Controller
 {
     /**
@@ -15,11 +16,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts= new Post;
-
-        $posts = Post::paginate(3);
-
-        return view('posts.index')->withPosts($posts);
+    
+      
     }
 
     /**
@@ -56,6 +54,7 @@ class PostController extends Controller
             $post->save();
 
             Session::flash('success','The Post Successfully saved!');
+            return redirect()->route('posts.show',$post->id);
     }
 
     /**
