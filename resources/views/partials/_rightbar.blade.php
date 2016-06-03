@@ -4,31 +4,18 @@
   use App\Post; 
   $posts = Post::all();
 ?>
-
-
-
-<div style="padding-left: 20px; padding-top: 10px">
-  <ul class="list-unstyled video-list-thumbs row">
-  <li >
-    <a href="#" title="UTI Video Text">
-      <img src="http://img.youtube.com/vi/iPMfy2sHujU/0.jpg" alt="Barca" class="img-responsive" height="130px" />
-      <h2>England Master is on the move</h2>
-      <span class="glyphicon glyphicon-play-circle"></span>
-      <span class="duration">03:15</span>
-    </a>
-  </li>
-</ul>
+<div style="padding-top: 10px;">
+<div >
+          <div class="thumbnail">
+            <img src="http://placehold.it/500x250/6495ED">
+              <div class="caption">
+                <h4 style="color:#6495ED"><span class="glyphicon glyphicon-th-large"></span>Thumbnail label</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a> <a href="#" class="btn btn-info btn-xs" role="button"><span class="glyphicon glyphicon-thumbs-up"></span>Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a>
+            </div>
+          </div>
 </div>
-
-<div style="padding-top:10px; padding-left:10px">
-
-    <div class="panel panel-default">
-      <div class="panel-body">
-
-      </div>
-      <div class="panel-footer">Panel footer</div>
-    </div>
-<ul class="ppost_nav" style="padding-top:10px; padding-left:10px" >
+<ul class="ppost_nav" style="padding-top:15px; padding-left:10px;">
           
           
               @foreach ($posts as $post)
@@ -54,3 +41,4 @@
                                       
 </ul>
 </div>
+       

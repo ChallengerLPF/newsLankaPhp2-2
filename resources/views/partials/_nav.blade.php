@@ -1,7 +1,9 @@
-<div class="jumbotron navbar-wrapper ">
-    <div class="header-top">
-<nav class=" container navbar navbar-inverse ">
-        <div class="container">
+<div class=" navbar-wrapper ">
+<div class="header-top">
+<div class="row">    
+<div class="col-md-12">
+<nav class=" navbar navbar-default navbar-fixed ">
+        <div >
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -45,11 +47,37 @@
             </div>
 
         </div>
-    </nav>
-    <ol class="breadcrumb container">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Library</a></li>
-          <li class="active">Data</li>
-        </ol>
+    
+    
+    
+    <div class="col-md-12" style="padding-top: 20px; padding-bottom: 5px;">
+            
+            <div class="col-md-9">
+                <div class="btn-group btn-breadcrumb">
+                    <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-home"></i></a>
+                    <a href="#" class="btn btn-default">Snippets</a>
+                    <a href="#" class="btn btn-default">Breadcrumbs</a>
+                    <a href="#" class="btn btn-default">Default</a>
+                </div>
+            </div>
+            <div id="custom-search-input" class="col-md-3 pull-left" >
+                            <div class="input-group col-md-12">
+                                <input type="text" class="  search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+            </div>
+          
+
     </div>
-</div>
+    
+
+    </nav>
+    </div>
+    </div>    
+    </div>
+    </div>
+ 

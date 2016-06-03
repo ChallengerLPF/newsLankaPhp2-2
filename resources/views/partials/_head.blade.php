@@ -25,4 +25,4 @@
         }
     </style>
     {{ Html::style('css/styles.css') }}
-   
+   </head>

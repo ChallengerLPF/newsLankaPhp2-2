@@ -8,13 +8,11 @@
         
     </div>
 
-        <div class="col-md-7">
-           
-                   
-        </ul>
-        
-
+    <div class="col-md-6">
+            @include('partials._main')
+    </div>
+    <div class="col-md-3">
+            @include('partials._rightbar')
+    </div>
 </div>
-        </div>
- </div>
 @endsection

@@ -1,5 +1,6 @@
+
 <footer>   
-<div class="container">
+
   <div class="row">
                 <div class="col-lg-4  col-md-4 col-sm-4 col-xs-6">
                     <h3> About Us </h3>
@@ -90,4 +91,3 @@
 
 </div>   
 </footer>        
-        

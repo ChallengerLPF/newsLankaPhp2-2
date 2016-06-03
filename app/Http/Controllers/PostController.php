@@ -17,6 +17,9 @@ class PostController extends Controller
     public function index()
     {
     
+
+        $posts = Post::paginate(3);
+        return view('home')->withPosts($posts);
       
     }
 
@@ -40,15 +43,14 @@ class PostController extends Controller
     {
          $this->validate($request,array(
                   'title' =>'required|max:255',
-                  
-                  'description' =>'required'
+                  'body' =>'required'
             ));
 
 
         //store in db
             $post =new Post;
             $post->title =$request->title;     
-            $post->description =$request->description;
+            $post->body =$request->body;
 
 
             $post->save();
