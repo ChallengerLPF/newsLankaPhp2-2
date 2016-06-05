@@ -4,8 +4,9 @@
   use App\Post; 
   $posts = Post::all();
 ?>
+<hr id="hr">
 @foreach($posts as $post)
-<div id="mainDiv" style="padding-top: 10px">
+<div id="mainDiv" style="padding-top: 10px;">
 
 		<ul class="media-list main-list">
 
@@ -42,15 +43,15 @@
 				</div>
 
 				
-				<div class="media-body" id="k">
+				<div class="media-body" >
 					<h4 class="media-content">
-						<img class="media-object img-responsive pull-left "src="http://lorempixel.com/500/250/" alt="..." style="padding-right: 10px;">
-						{{$post->body}}
-
+						<img id="imgMain" class="media-object img-responsive pull-left "src="{!! url('images/'.$post->image_url) !!}" alt="not displayed" style="padding-right: 10px; max-width: 300px;max-height: 300px;padding-bottom:10px;">
+						
+							{{$post->body}}
+					
 					</h4>
 
-		
-
+					
 
 
 					<!-- readMore -->
@@ -59,10 +60,10 @@
 							<div
 								class="source-section first-section first-lower-section subscribe"
 								id="viewMore">
-								<button type="button"
+								<a href=""><button type="button"
 									class="btn btn-success btn-md btn-subscribe">
 									<i class="fa fa-newspaper-o fa-lg "></i>Read More
-								</button>
+								</button></a>
 
 							</div>
 						</div>
@@ -81,8 +82,20 @@
 						</div>
 
 					</div>
-					<!-- readMore -->
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+								<div class="embed-responsive embed-responsive-16by9">
+ 									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jVIxe3YLNs8"></iframe>
+								</div>
+						</div>
+						<div class="col-md-2"></div>
+						
+					</div>
 
 				</div>
+
+
 	</div>
+	<hr id="hr">
 	@endforeach

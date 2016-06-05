@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
-use App\Http\Requests;
-use Session;
 
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Post;
+use DB;
+use Input;
 class PostController extends Controller
 {
     /**
@@ -16,12 +18,15 @@ class PostController extends Controller
      */
     public function index()
     {
-    
+        //
 
-        $posts = Post::paginate(3);
-        return view('home')->withPosts($posts);
-      
+        $posts = DB::table('posts')->paginate(2);
+        return view('welcome');
     }
+
+   
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -30,7 +35,7 @@ class PostController extends Controller
      */
     public function create()
     {
-         return view('posts.create');
+        return view('posts.create');
     }
 
     /**
@@ -41,22 +46,44 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-         $this->validate($request,array(
-                  'title' =>'required|max:255',
-                  'body' =>'required'
-            ));
+        //validate
+        $imageTempName = $request->file('file')->getPathname();
+                $imageName = $request->file('file')->getClientOriginalName();
+        
 
 
-        //store in db
-            $post =new Post;
-            $post->title =$request->title;     
-            $post->body =$request->body;
+
+        
+        if(Input::hasFile('file'))
+        {
+                
+                $file = Input::file('file');
+                $file->move('images',$file->getClientOriginalName());
+                
+                
+        }
+        $path = Input::file('file')->getRealPath();
+        $this->validate($request, array(
+                'title'=>'required|max:255',
+                'body'=>'required'
+        ));    
 
 
-            $post->save();
+        //store
+        $post =new Post;
 
-            Session::flash('success','The Post Successfully saved!');
-            return redirect()->route('posts.show',$post->id);
+        $post->title= $request->title;
+        $post->body= $request->body;
+        $post->image_url=$request->file;
+        $post->save();
+        echo "<script type='text/javascript'>alert('$path');</script>";
+        //redirect
+
+     //   return redirect()->routes('posts.show',$post->id);
+
+        DB::table('posts')
+            ->where('image_url', $imageTempName)
+            ->update(['image_url' => $imageName]);
     }
 
     /**

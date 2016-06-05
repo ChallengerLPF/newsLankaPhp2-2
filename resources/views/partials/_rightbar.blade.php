@@ -3,26 +3,41 @@
 
   use App\Post; 
   $posts = Post::all();
+  $posts1 = Post::orderBy('created_at', 'desc')->take(1)->get();
+  //$result->result = DB::table('posts')->select('image_url')->orderBy('created_at', 'desc')->take(1)->first();
+  $result=Post::orderBy('created_at', 'desc')->first()->image_url;
+  $result1=Post::orderBy('created_at', 'desc')->first()->title;
+  $result2=Post::orderBy('created_at', 'desc')->first()->body;
 ?>
-<div style="padding-top: 10px;">
+
+
+<div style="padding-top: 20px; padding-right:15px;">
 <div >
           <div class="thumbnail">
-            <img src="http://placehold.it/500x250/6495ED">
+           <img id="imgMain" class="media-object img-responsive pull-left "src="{!! url('images/'.$result) !!}" alt="not displayed" style="max-width: 250px;max-height: 250px;">
               <div class="caption">
-                <h4 style="color:#6495ED"><span class="glyphicon glyphicon-th-large"></span>Thumbnail label</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                <h4 style="color:#6495ED"><span class="glyphicon glyphicon-th-large"></span>{!!$result1!!}</h4>
+                <p>{!!$result2!!}</p>
                 <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a> <a href="#" class="btn btn-info btn-xs" role="button"><span class="glyphicon glyphicon-thumbs-up"></span>Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a>
             </div>
           </div>
 </div>
-<ul class="ppost_nav" style="padding-top:15px; padding-left:10px;">
+
+
+
+
+
+
+
+<!--this is for the news ticker -->
+<ul class="ppost_nav" style="padding-top:15px; padding-right:10px;">
           
           
               @foreach ($posts as $post)
                       <li>
                           <div class="media" >
                               <a class="media-left" href="single_page.html">
-                                 <img src="http://lorempixel.com/70/70/" alt="img"> 
+                                 <img id="imgMain" class="media-object img-responsive pull-left "src="{!! url('images/'.$post->image_url) !!}" alt="not displayed" style="max-width: 70px;max-height: 70px;">
                               </a>
                               <div class="media-body">
                                 <a class="catg_title" href="single_page.html" style="text-align:justify;">

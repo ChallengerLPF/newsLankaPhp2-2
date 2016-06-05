@@ -53,11 +53,24 @@
     <div class="col-md-12" style="padding-top: 20px; padding-bottom: 5px;">
             
             <div class="col-md-9">
-                <div class="btn-group btn-breadcrumb">
-                    <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-home"></i></a>
-                    <a href="#" class="btn btn-default">Snippets</a>
-                    <a href="#" class="btn btn-default">Breadcrumbs</a>
-                    <a href="#" class="btn btn-default">Default</a>
+                
+                            <div class="btn-toolbar demoPadder" role="toolbar" aria-label="Toolbar with button groups">
+                  <div class="btn-group" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-default">Fashion</button>
+                    <button type="button" class="btn btn-default">Movies</button>
+                    <button type="button" class="btn btn-default">Sports</button>
+                    <button type="button" class="btn btn-default">Politics</button>
+                    <button type="button" class="btn btn-default">Fashion</button>
+                    <button type="button" class="btn btn-default">Movies</button>
+                    <button type="button" class="btn btn-default">Sports</button>
+                    <button type="button" class="btn btn-default">Politics</button>
+                    <button type="button" class="btn btn-default">Fashion</button>
+                    <button type="button" class="btn btn-default">Movies</button>
+                    <button type="button" class="btn btn-default">Sports</button>
+                    <button type="button" class="btn btn-default">Politics</button>
+                    <button type="button" class="btn btn-default">Sports</button>
+                    
+                  </div>
                 </div>
             </div>
             <div id="custom-search-input" class="col-md-3 pull-left" >

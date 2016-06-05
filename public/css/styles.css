@@ -1,3 +1,29 @@
+
+.demoPadder {
+    padding-top:15px;
+    }
+    .btn-default {
+  color: #007aff;
+  background-color: #fff;
+  border-color: #007aff;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+    color: #fff;
+  background-color: #007aff;
+  border-color: #007aff;
+    }
+/*new buttons*/
+
+#hr {
+   height:3px; border:none; color:rgb(60,90,180); background-color:rgb(60,90,180);
+}
+
+
+/* this is for the news ticker */
+
+ 
+/* this is for the news ticker */
 .video-list-thumbs{}
 .video-list-thumbs > li{
     margin-bottom:12px;

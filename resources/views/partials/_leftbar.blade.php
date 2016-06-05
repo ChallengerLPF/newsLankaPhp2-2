@@ -5,8 +5,26 @@
   $posts = Post::all();
 ?>
 
+<style>
+  h2{
 
+    color: white;
+  }
 
+</style>
+<!-- video -->
+<div style="padding-left: 20px; padding-top: 20px">
+  <ul class="list-unstyled video-list-thumbs row">
+  <li >
+    <a href="#" title="UTI Video Text">
+      <img src="http://img.youtube.com/vi/iPMfy2sHujU/0.jpg" alt="Barca" class="img-responsive" height="130px" />
+      <h2>England Master is on the move</h2>
+      <span class="glyphicon glyphicon-play-circle"></span>
+      <span class="duration">03:15</span>
+    </a>
+  </li>
+</ul>
+</div>
 <div style="padding-left: 20px; padding-top: 10px">
   <ul class="list-unstyled video-list-thumbs row">
   <li >
@@ -19,6 +37,41 @@
   </li>
 </ul>
 </div>
+<div style="padding-left: 20px; padding-top: 10px">
+  <ul class="list-unstyled video-list-thumbs row">
+  <li >
+    <a href="#" title="UTI Video Text">
+      <img src="http://img.youtube.com/vi/iPMfy2sHujU/0.jpg" alt="Barca" class="img-responsive" height="130px" />
+      <h2>England Master is on the move</h2>
+      <span class="glyphicon glyphicon-play-circle"></span>
+      <span class="duration">03:15</span>
+    </a>
+  </li>
+</ul>
+</div>
+<div style="padding-left: 20px; padding-top: 10px">
+  <ul class="list-unstyled video-list-thumbs row">
+  <li >
+    <a href="#" title="UTI Video Text">
+      <img src="http://img.youtube.com/vi/iPMfy2sHujU/0.jpg" alt="Barca" class="img-responsive" height="130px" />
+      <h2>England Master is on the move</h2>
+      <span class="glyphicon glyphicon-play-circle"></span>
+      <span class="duration">03:15</span>
+    </a>
+  </li>
+</ul>
+</div>
+<!-- video -->
+
+
+
+
+
+
+
+
+
+
 
 <div style="padding-top:10px; padding-left:10px">
 
@@ -35,7 +88,7 @@
                       <li>
                           <div class="media" >
                               <a class="media-left" href="single_page.html">
-                                 <img src="http://lorempixel.com/70/70/" alt="img"> 
+                                 <img id="imgMain" class="media-object img-responsive pull-left "src="{!! url('images/'.$post->image_url) !!}" alt="not displayed" style="max-width: 70px;max-height: 70px;">
                               </a>
                               <div class="media-body">
                                 <a class="catg_title" href="single_page.html" style="text-align:justify;">
