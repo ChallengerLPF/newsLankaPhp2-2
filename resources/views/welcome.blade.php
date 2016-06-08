@@ -3,6 +3,9 @@
 @section('content')
 
 <div class="row">
+  @include('partials.carousel_full')
+</div>
+<div class="row">
     <div class="col-md-2">
          @include('partials._leftbar')
         

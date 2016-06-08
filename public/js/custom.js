@@ -1,4 +1,12 @@
- 
+$(document).ready(function(evt){
+    $('#custom_carousel').on('slide.bs.carousel', function (evt) {
+      $('#custom_carousel .controls li.active').removeClass('active');
+      $('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
+    })
+});
+
+
+/////////////////////////////////// 
  //<!-- ========================= -->
         //////////////This Theme Design and Developed //////////////////////
         //////////// by www.wpfreeware.com======================-->

@@ -24,5 +24,11 @@
             margin-right: 6px;
         }
     </style>
+
+    <link href="{{ URL::asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
+    <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
+
+
     {{ Html::style('css/styles.css') }}
+    {{ Html::script('js/custom.js') }}
    </head>
