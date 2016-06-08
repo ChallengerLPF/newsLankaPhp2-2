@@ -1,9 +1,15 @@
-
 <?php
 
   use App\Post; 
-  $posts = Post::all();
-?>
+
+  $leftBarPosts;
+
+        DB::table('posts')->chunk(4,function($users) {
+            foreach ($posts as $post) {
+                   leftBarPosts[] =   $post;   
+            } 
+        );
+?> 
 
 <style>
   h2{
@@ -12,56 +18,22 @@
   }
 
 </style>
-<!-- video -->
+<!-- popular video articles-->
+@foreach($leftBarPosts as $barPost)
 <div style="padding-left: 20px; padding-top: 20px">
   <ul class="list-unstyled video-list-thumbs row">
   <li >
     <a href="#" title="UTI Video Text">
-      <img src="http://img.youtube.com/vi/iPMfy2sHujU/0.jpg" alt="Barca" class="img-responsive" height="130px" />
-      <h2>England Master is on the move</h2>
+      <img src="{{$barPost->image_url}}" alt="img" class="img-responsive" height="130px" />
+      <h2>$barPost->title</h2>
       <span class="glyphicon glyphicon-play-circle"></span>
       <span class="duration">03:15</span>
     </a>
   </li>
 </ul>
 </div>
-<div style="padding-left: 20px; padding-top: 10px">
-  <ul class="list-unstyled video-list-thumbs row">
-  <li >
-    <a href="#" title="UTI Video Text">
-      <img src="http://img.youtube.com/vi/iPMfy2sHujU/0.jpg" alt="Barca" class="img-responsive" height="130px" />
-      <h2>England Master is on the move</h2>
-      <span class="glyphicon glyphicon-play-circle"></span>
-      <span class="duration">03:15</span>
-    </a>
-  </li>
-</ul>
-</div>
-<div style="padding-left: 20px; padding-top: 10px">
-  <ul class="list-unstyled video-list-thumbs row">
-  <li >
-    <a href="#" title="UTI Video Text">
-      <img src="http://img.youtube.com/vi/iPMfy2sHujU/0.jpg" alt="Barca" class="img-responsive" height="130px" />
-      <h2>England Master is on the move</h2>
-      <span class="glyphicon glyphicon-play-circle"></span>
-      <span class="duration">03:15</span>
-    </a>
-  </li>
-</ul>
-</div>
-<div style="padding-left: 20px; padding-top: 10px">
-  <ul class="list-unstyled video-list-thumbs row">
-  <li >
-    <a href="#" title="UTI Video Text">
-      <img src="http://img.youtube.com/vi/iPMfy2sHujU/0.jpg" alt="Barca" class="img-responsive" height="130px" />
-      <h2>England Master is on the move</h2>
-      <span class="glyphicon glyphicon-play-circle"></span>
-      <span class="duration">03:15</span>
-    </a>
-  </li>
-</ul>
-</div>
-<!-- video -->
+@endforeach
+<!-- popular video articles-->
 
 
 

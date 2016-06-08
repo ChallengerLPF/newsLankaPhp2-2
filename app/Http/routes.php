@@ -22,12 +22,17 @@ Route::group(['middleware'=>['web']],function(){
 	Route::auth();
 
 	Route::get('/home', 'HomeController@index');	
+
+	
 	Route::get('/', function () {
 	    return view('welcome');
 	});
 
-	
+	// Route::get('/fullArticle/{id}','PostController@full');
 	Route::resource('posts','PostController');
 	Route::post('upload','PostController@upload');
 
 });
+// Route::get('/fullArticle','PostController@full'); //for tests
+
+

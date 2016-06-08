@@ -20,8 +20,17 @@ class PostController extends Controller
     {
         //
 
-        $posts = DB::table('posts')->paginate(2);
-        return view('welcome');
+        $posts = DB::table('posts')->paginate(2); //all posts of  page
+
+        $leftBarPosts = Post::orderBy('views','desc')->take(4)->get();
+
+        // DB::table('posts')->chunk(4,function($users) {
+        //     foreach ($posts as $post) {
+        //            leftBarPosts[] =   $post;   
+        //     } 
+        // );
+
+        return view('home',['posts'=>$posts , 'leftBarPosts'=>$leftBarPosts]);
     }
 
    
@@ -94,8 +103,29 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        $post->views++;
+        $post->save();
+        
+        return view('posts.full_article',['post'=>$post]);
     }
+
+    // public function full()
+    // {
+    //     $post = Post::findOrFail(1);
+
+    //     return view('posts.full_article',['post'=>$post]);
+    // }
+
+    // public function full($id)
+    // {
+    //     $post = Post::findOrFail($id);
+
+    //     $post->views++;
+    //     $post->save();
+    //     return view('posts.full_article',['post'=>$post]);
+    // }
 
     /**
      * Show the form for editing the specified resource.
