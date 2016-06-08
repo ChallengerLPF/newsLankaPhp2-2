@@ -30,4 +30,8 @@ Route::group(['middleware'=>['web']],function(){
 	Route::resource('posts','PostController');
 	Route::post('upload','PostController@upload');
 
+
+	
+
+
 });

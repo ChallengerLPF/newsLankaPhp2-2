@@ -76,7 +76,7 @@ class PostController extends Controller
         $post->body= $request->body;
         $post->image_url=$request->file;
         $post->save();
-        echo "<script type='text/javascript'>alert('$path');</script>";
+        
         //redirect
 
      //   return redirect()->routes('posts.show',$post->id);
@@ -120,6 +120,7 @@ class PostController extends Controller
         //
     }
 
+   
     /**
      * Remove the specified resource from storage.
      *

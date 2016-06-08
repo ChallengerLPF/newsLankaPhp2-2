@@ -2,7 +2,7 @@
 <div class="header-top">
 <div class="row">    
 <div class="col-md-12">
-<nav class=" navbar navbar-default navbar-fixed ">
+<nav class=" navbar navbar-default navbar-fixed navbar-inverse ">
         <div >
             <div class="navbar-header">
 
@@ -23,6 +23,10 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ url('/') }}">Home</a></li>
                 </ul>
 
